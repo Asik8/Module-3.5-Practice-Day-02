@@ -5,9 +5,23 @@ using namespace std;
 int main() {
     ll n;
     cin >> n;
-    string s;
-    cin>>s;
-    sort(s.begin(),s.end());
-    cout<<s<<endl;
+    char s;
+    int ch[26]={0};
+    for(ll i=0;i<n;i++)
+    {
+        cin>>s;
+        ch[s-'a']++;
+    }
+    for(int i=0;i<26;i++)
+    {
+        if(ch[i]>0)
+        {
+            for(int j=0;j<ch[i];j++)
+            {
+                char c= 'a'+i;
+                cout<<c;
+            }
+        }
+    }
     return 0;
 }
