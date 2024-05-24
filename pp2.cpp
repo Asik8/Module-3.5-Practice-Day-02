@@ -24,3 +24,9 @@ int main() {
     kohli = nullptr;
     return 0;
 }
+
+// If i use kohli = dhoni, it won't work as expected because it 
+// will make both kohli and dhoni point to the same memory location. When you delete dhoni,
+// you'll also be deleting the memory that 
+// kohli is pointing to, resulting in undefined behavior when 
+// you try to access kohli afterward. To avoid this, you need to copy the data manually as shown in the previous example.
